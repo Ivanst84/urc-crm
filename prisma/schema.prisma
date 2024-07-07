@@ -24,9 +24,9 @@ model User {
   gender String
   age Int
   email String @unique
-  routeId Int
+  routeId Int?
   phone String?
-  route Route @relation(fields: [routeId], references: [id])
+  route Route? @relation(fields: [routeId], references: [id])
   address Address[]
 
 
